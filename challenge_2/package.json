@@ -10,8 +10,8 @@
   "dependencies": {
     "express": "4.17.1",
     "nodemon": "2.0.4",
-    "jQuery": "1.7.4",
-    "body-parser": "1.19.0"
+    "body-parser": "1.19.0",
+    "jquery": "3.5.1"
   },
   "author": "Emma Li",
   "license": "ISC"

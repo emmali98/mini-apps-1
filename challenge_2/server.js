@@ -23,14 +23,16 @@ app.post('/', (req, res) => {
       if (err) {
         res.sendStatus(400);
       } else {
-        fs.readFile(__dirname + '/client/index.html', 'utf8', (err, data) => {
-          if (err) throw err;
-          else {
-            var insertIdx = data.indexOf('crv') + 5;
-            var page = data.slice(0, insertIdx) + results + data.slice(insertIdx);
-            res.status(201).send(page);
-          }
-        })
+        res.status(201).send(results);
+
+        // fs.readFile(__dirname + '/client/index.html', 'utf8', (err, data) => {
+        //   if (err) throw err;
+        //   else {
+        //     var insertIdx = data.indexOf('crv') + 5;
+        //     var page = data.slice(0, insertIdx) + results + data.slice(insertIdx);
+        //     res.status(201).send(page);
+        //   }
+        // })
       }
     });
   });

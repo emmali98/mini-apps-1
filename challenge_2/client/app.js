@@ -1,11 +1,11 @@
 const form = document.getElementById('form');
 const input = document.getElementById('json');
-const crv = document.getElementById('crv');
+const csv = document.getElementById('csv');
 
 // Handling file submission
 var handleSubmit = (e) => {
   e.preventDefault();
-  crv.innerHTML = '';
+  csv.innerHTML = '';
 
   var formData = new FormData();
   formData.append('file', input.files[0]);
@@ -18,7 +18,7 @@ var handleSubmit = (e) => {
     contentType: false,
     success: (data) => {
       console.log('File posted!');
-      crv.append(data);
+      csv.append(data);
     }
   })
 }
@@ -26,4 +26,4 @@ var handleSubmit = (e) => {
 form.onsubmit = handleSubmit;
 
 // Formatting CSV
-crv.style.whiteSpace = 'pre-wrap';
+csv.style.whiteSpace = 'pre-wrap';

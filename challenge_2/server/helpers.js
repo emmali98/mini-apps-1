@@ -1,3 +1,5 @@
+var currentCSV = '';
+
 var getCSVfromJSON = (string, callback) => {
   try {
     var json = JSON.parse(string);
@@ -25,4 +27,7 @@ var getCSVfromJSON = (string, callback) => {
   }
 };
 
-module.exports.getCSVfromJSON = getCSVfromJSON;
+module.exports = {
+  getCSVfromJSON: getCSVfromJSON,
+  currentCSV: currentCSV
+}

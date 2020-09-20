@@ -5,7 +5,6 @@
 <body>
   <form id="form" method="POST" enctype="multipart/form-data">
     <label>JSON
-      <!-- <textarea name="json"></textarea> -->
       <input type="file"
        id="json"
        name="json"
@@ -13,6 +12,9 @@
     <button>Submit</button>
     </label>
   </form>
-  <div id="crv"></div>
+  <div id="csv"></div>
+  <div>
+    <a href="/csv" download="myCSV">Download CSV</a>
+  </div>
   <script src="app.js"></script>
 </body>
